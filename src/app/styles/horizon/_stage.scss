@@ -1,0 +1,164 @@
+@mixin shadow($deepness, $shadowX, $shadowY) {
+  box-shadow: $shadowX $shadowY $deepness rgba(0, 0, 0, 0.5);
+}
+
+@mixin stage($deepness, $shadowDepth, $shadowX: 0, $shadowY: 0) {
+  transform: translateZ(#{$deepness * $depth}px);
+  @include shadow($shadowDepth, $shadowX, $shadowY);
+}
+
+.stage_background {
+  @include stage(-2, 10px);
+
+  .horizon_ct & {
+    @include stage(-2, 10px, 0px, 10px);
+  }
+  .horizon_cm & {
+    @include stage(-2, 10px, 0px, 0px);
+  }
+  .horizon_cb & {
+    @include stage(-2, 10px, 0px, -10px);
+  }
+  .horizon_lt & {
+    @include stage(-2, 10px, 10px, 10px);
+  }
+  .horizon_lm & {
+    @include stage(-2, 10px, 10px, 0px);
+  }
+  .horizon_lb & {
+    @include stage(-2, 10px, 10px, -10px);
+  }
+  .horizon_rt & {
+    @include stage(-2, 10px, -10px, 10px);
+  }
+  .horizon_rm & {
+    @include stage(-2, 10px, -10px, 0px);
+  }
+  .horizon_rb & {
+    @include stage(-2, 10px, -10px, -10px);
+  }
+}
+.stage_down {
+  @include stage(-1, 10px);
+
+  .horizon_ct & {
+    @include stage(-1, 10px, 0px, 10px);
+  }
+  .horizon_cm & {
+    @include stage(-1, 10px, 0px, 0px);
+  }
+  .horizon_cb & {
+    @include stage(-1, 10px, 0px, -10px);
+  }
+  .horizon_lt & {
+    @include stage(-1, 10px, 10px, 10px);
+  }
+  .horizon_lm & {
+    @include stage(-1, 10px, 10px, 0px);
+  }
+  .horizon_lb & {
+    @include stage(-1, 10px, 10px, -10px);
+  }
+  .horizon_rt & {
+    @include stage(-1, 10px, -10px, 10px);
+  }
+  .horizon_rm & {
+    @include stage(-1, 10px, -10px, 0px);
+  }
+  .horizon_rb & {
+    @include stage(-1, 10px, -10px, -10px);
+  }
+}
+.stage_center {
+  @include stage(0, 10px);
+
+  .horizon_ct & {
+    @include stage(0, 10px, 0px, 10px);
+  }
+  .horizon_cm & {
+    @include stage(0, 10px, 0px, 0px);
+  }
+  .horizon_cb & {
+    @include stage(0, 10px, 0px, -10px);
+  }
+  .horizon_lt & {
+    @include stage(0, 10px, 10px, 10px);
+  }
+  .horizon_lm & {
+    @include stage(0, 10px, 10px, 0px);
+  }
+  .horizon_lb & {
+    @include stage(0, 10px, 10px, -10px);
+  }
+  .horizon_rt & {
+    @include stage(0, 10px, -10px, 10px);
+  }
+  .horizon_rm & {
+    @include stage(0, 10px, -10px, 0px);
+  }
+  .horizon_rb & {
+    @include stage(0, 10px, -10px, -10px);
+  }
+}
+.stage_up {
+  @include stage(1, 10px);
+
+  .horizon_ct & {
+    @include stage(1, 10px, 0px, 10px);
+  }
+  .horizon_cm & {
+    @include stage(1, 10px, 0px, 0px);
+  }
+  .horizon_cb & {
+    @include stage(1, 10px, 0px, -10px);
+  }
+  .horizon_lt & {
+    @include stage(1, 10px, 10px, 10px);
+  }
+  .horizon_lm & {
+    @include stage(1, 10px, 10px, 0px);
+  }
+  .horizon_lb & {
+    @include stage(1, 10px, 10px, -10px);
+  }
+  .horizon_rt & {
+    @include stage(1, 10px, -10px, 10px);
+  }
+  .horizon_rm & {
+    @include stage(1, 10px, -10px, 0px);
+  }
+  .horizon_rb & {
+    @include stage(1, 10px, -10px, -10px);
+  }
+}
+.stage_foreground {
+  @include stage(2, 10px);
+
+  .horizon_ct & {
+    @include stage(2, 10px, 0px, 10px);
+  }
+  .horizon_cm & {
+    @include stage(2, 10px, 0px, 0px);
+  }
+  .horizon_cb & {
+    @include stage(2, 10px, 0px, -10px);
+  }
+  .horizon_lt & {
+    @include stage(2, 10px, 10px, 10px);
+  }
+  .horizon_lm & {
+    @include stage(2, 10px, 10px, 0px);
+  }
+  .horizon_lb & {
+    @include stage(2, 10px, 10px, -10px);
+  }
+  .horizon_rt & {
+    @include stage(2, 10px, -10px, 10px);
+  }
+  .horizon_rm & {
+    @include stage(2, 10px, -10px, 0px);
+  }
+  .horizon_rb & {
+    @include stage(2, 10px, -10px, -10px);
+  }
+}

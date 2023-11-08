@@ -1,0 +1,56 @@
+$perspective: 1000px;
+$vanishingPoint_center_top: 50% 25%;
+$vanishingPoint_center_middle: 50% 50%;
+$vanishingPoint_center_bottom: 50% 75%;
+$vanishingPoint_left_top: 25% 25%;
+$vanishingPoint_left_middle: 25% 50%;
+$vanishingPoint_left_bottom: 25% 75%;
+$vanishingPoint_right_top: 75% -25%;
+$vanishingPoint_right_middle: 75% -50%;
+$vanishingPoint_right_bottom: 75% -75%;
+
+.horizon {
+  perspective: $perspective;
+  perspective-origin: $vanishingPoint_center_middle;
+
+  &_dyn {
+    perspective: $perspective;
+  }
+
+  &_ct {
+    perspective: $perspective;
+    perspective-origin: $vanishingPoint_center_top;
+  }
+  &_cm {
+    perspective: $perspective;
+    perspective-origin: $vanishingPoint_center_middle;
+  }
+  &_cb {
+    perspective: $perspective;
+    perspective-origin: $vanishingPoint_center_bottom;
+  }
+  &_lt {
+    perspective: $perspective;
+    perspective-origin: $vanishingPoint_left_top;
+  }
+  &_lm {
+    perspective: $perspective;
+    perspective-origin: $vanishingPoint_left_middle;
+  }
+  &_lb {
+    perspective: $perspective;
+    perspective-origin: $vanishingPoint_left_bottom;
+  }
+  &_rt {
+    perspective: $perspective;
+    perspective-origin: $vanishingPoint_right_top;
+  }
+  &_rm {
+    perspective: $perspective;
+    perspective-origin: $vanishingPoint_right_middle;
+  }
+  &_rb {
+    perspective: $perspective;
+    perspective-origin: $vanishingPoint_right_bottom;
+  }
+}

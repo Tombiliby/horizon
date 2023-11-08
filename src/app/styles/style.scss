@@ -1,0 +1,46 @@
+body {
+  background-color: rgba(172, 255, 47, 0.051);
+}
+
+.exemple {
+  background-color: blue;
+  overflow: hidden;
+  perspective: var(--perspective);
+  height: var(--variable2);
+  width: var(--variable3);
+
+  .confZone {
+    position: fixed;
+    top: 0;
+    width: 200px;
+    z-index: 1000;
+    background-color: darkcyan;
+    padding: 20px;
+  }
+  .scene {
+    min-height: 100vh;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .viewbox {
+    position: fixed;
+    inset: 0;
+    border: 8px solid coral;
+    background-color: #fff4;
+  }
+
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+    animation: rotate 10s infinite linear;
+
+    @keyframes rotate {
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+  }
+}
